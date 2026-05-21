@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "793980032932",
+    "project_id": "alarm-demo-af881",
+    "storage_bucket": "alarm-demo-af881.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793980032932:android:96bffa02bd11b94dfd1331",
+        "android_client_info": {
+          "package_name": "com.example.alarm_demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7Q0wLHk-QrjCLP7zjwUnPGrszU6k1LmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
