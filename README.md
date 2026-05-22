@@ -1,4 +1,4 @@
-# alarm_app
+# alarm_demo
 
 A new Flutter project.
 

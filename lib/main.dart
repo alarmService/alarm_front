@@ -7,9 +7,10 @@ import 'pages/title.dart';
 
 @pragma('vm:entry-point')
 Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  // 백그라운드 격리 공간(Isolate)에서도 alarm 패키지를 사용하려면 초기화가 필수입니다.
+  await alarm_pkg.Alarm.init();
 
   // 백그라운드에서 알람 즉시 울림
   await alarm_pkg.Alarm.set(
@@ -33,9 +34,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Firebase 초기화
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   // alarm 패키지 초기화
   await alarm_pkg.Alarm.init();
@@ -45,7 +44,6 @@ Future<void> main() async {
 
   runApp(const MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
